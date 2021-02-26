@@ -16,11 +16,11 @@ for i in range(num_pages):
     # get information from table and append to df
     df = pd.read_html(link)
     df = df[0]
-    print(f"\tdf size: {df.size}")
+    # print(f"\tdf size: {df.size}")
     
     #append to master
     master = master.append(df)
     master.reset_index(drop=True)
-    print(f"\tmaster size: {master.shape}")
-    
+
+ #save to csv
 master.to_csv('player_all_time.csv')
