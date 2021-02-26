@@ -19,9 +19,9 @@ Single-Season Team Stats provides yearly data on performance. Information on win
 Single-season Player Stats provide slices in time for each player. With this data set, the progress of a player can be tracked and, when combined with other data sets, can be linked with the impact on team performance.
 
 **Definitions** 
-- **+ / - or 'plus/minus'** is calculated by AA + BB + CC - DD = +/-
+- **+ / - or 'plus/minus'** is calculated by ASSISTS + BLOCKS + GOALS - TURNOVERS = +/-
 
 ## 🔁 Process
-Data Scraping > ~~Data Cleansing~~ > Exploratory Data Analysis (EDA) > Model Building > Model Production
+Data Scraping > Data Cleansing > Exploratory Data Analysis (EDA) > Model Building > Model Production
 
 ## 📊 Results
