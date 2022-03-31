@@ -1,27 +1,20 @@
 # **The American Ultimate Disc League**
-The American Ultimate Disc League (AUDL) was created in 2013 to bring the sport of ultimate (created in XXXX) to the professional stage. The league originally started with X teams and has now grown to Y. Since the inaugural year, the league has collected data during their games on many key player and team attributes. This is a deep dive into the stats provided by the AUDL on their [website](https://theaudl.com/league/stats). The site provides All-time Player Stats, Single-season Team Stats, and Single-season Player Stats.
+The American Ultimate Disc League (AUDL) was created in 2012 to bring the sport of ultimate to the professional stage. The league originally started with 8 teams and has now grown to 25, spanning the US and Canada. Since the inaugural year, the league has collected data during their games on many key player and team attributes. This is a look into both player and team stats provided by the AUDL on their [website](https://theaudl.com/league/stats). The site provides All-time Player Stats, Single-season Team Stats, and Single-season Player Stats.
 
 ## ❔ Problem Statement
-This analysis does not seek to solve one problem, but rather explore the data available to learn and answer questions about **players** such as:
-- Do players naturally divide into groups such as *Goal Scorers* and *Assist Throwers*, or are players who score goals more just as likely or more likely to throw more assists as well?
-- What is the relationship between games played, points played, and goals scored? Are these all linearly correlated?
-- Do players with more blocks (likely defensive players) play more points?
+This analysis seeks to look at two separate problems:
 
-... and questions about **teams** such as:
-- What short-term improvements lead to the biggest improvements in wins?
+1.  Does playing a game at home versus away give a team an advantage? If so, what kind of advantage and how much of an advantage?
+- The "Home Court Advantage" is a well known phenomenon in team sports. When your friends and family are surrounding you, it can bolster teams to perform at a more peak level. In this project, I'll assess team performance in several categories, as well as player performance in several categories for a specific team (#CantStopWontStop) to see how playing at home versus away affects performance.
+
+2. Can we effectively categorize players into sub-categories based on their player attributes?
+- Within some player pages on the AUDL website, next to their team name players may have an on-field designation of 'Cutter', 'Handler', 'Defender', or 'Hybrid'. Of the ~2,700 players on the website, nearly 500 of these players have a designation. In this project, I'll test two separate classifiers (KNN and Decision Tree) in an attempt to determine if it's possible to properly classify players based on attributes such as goals, assists, points played, etc.
 
 ## 🔢 Data
 
-All-Time Player Stats helps look at the league in its entirety. Since its inaugural year, there have been over 2000 players that have played in the league. This data set can be used to establish baseline information on how your average player performs, how players break down in terms of stats, and if players can be grouped into sub-categories.
+Data was scraped from the AUDL website and saved to a series of CSV files. For Problem #1 (Home Field Advantage), I will use both team stats by season and player stats as a whole. For Problem #2 (Categorization), data was scraped from each player page. This data will be merged with each player's overall season stats for each season. One paired with these stats, the attributes will be normalized by points played to make sure players with the most playing time don't skew the data set.
 
-Single-Season Team Stats provides yearly data on performance. Information on wins, losses, points scored, and offensive and defensive efficiency, as well as other stats, are tracked by team. This data set can show what factors are most important to winning. This can help point to what players can do to be most effective on a team.
+For future work, it would be useful to identify players that have shifted roles across seasons. If a player changes from being primarily a Cutter in 2020, to primarily a Handler in 2021, they will likely be noted on the website as a Handler, but their 2020 stats may not reflect that.
 
-Single-season Player Stats provide slices in time for each player. With this data set, the progress of a player can be tracked and, when combined with other data sets, can be linked with the impact on team performance.
-
-**Definitions** 
-- **+ / - or 'plus/minus'** is calculated by ASSISTS + BLOCKS + GOALS - TURNOVERS = +/-
-
-## 🔁 Process
-Data Scraping > Data Cleansing > Exploratory Data Analysis (EDA) > Model Building > Model Production
 
 ## 📊 Results
