@@ -18,10 +18,26 @@ For future work, it would be useful to identify players that have shifted roles 
 
 
 ## 📊 Results
+
+### Problem 1: Home Court Advantage 🏠
+
 Using data from 2014 through 2021 (excluding 2020 due to a lack of season), there is strong statistical evidence that playing at home provides considerable advantage for a team as compared to playing away. The data assessed over 1,000 AUDL games from the perspective of both the home and the away teams. The following image shows how many Home games each team played across the 7 seasons.
 
 
 ![alt text](./IMAGES/home_games_count.png)
 
+Long-standing teams such as the Madison Radicals (MAD) and the New York Empire (NY) have considerable impact on this study because they have been in the league since it's inauguration and have done fairly well. These teams are just two of many examples of teams that clearly perform better at home. The trend is continuous throughout all seasons analyzed, but the gap between scores of home teams and away teams appears to be closing.
 
-### Problem 1: Home Court Advantage
+![Home v. Away by Season](./IMAGES/home_v_away_by_season.png)
+
+Through the 2018 season, the difference between Average Home Score and Average Away Score was relatively consistent, with Home teams scoring 1.5-2 goals more than their counterparts. However, in the 2019 season something changed. One plausible reason is the change to the rule dictating when the clock is allowed to start for a point. The new rule instituted in 2019 allows the clock to start when a pull is released (rather than when it is caught). This extra time may lead to more Hail Mary passes at the end of games, especially by teams who are down by just 1-2 goals.
+
+Although close in 2019, and even closer in 2021, the Home Team seems to consistently score more points on average. But this isn't the case for every team. The below chart shows the overall goal modification factor for each team (at both home and away games). For at least 
+
+![Overall Scoring Factor](./IMAGES/total_scoring_factor.png)
+
+The higher the scoring factor, the more goals a team is expected to score against opponents, whether at home or away. The [Problem 1 Notebook](./P1%20-%20Home%20Field%20Advantage.ipynb) has the broken out Home and Away scoring factors for each team, indicating how many points they're expected to win/lose by when playing Home and Away games respectively.
+
+Additionally, a study was done to see if there is statistical significance to the difference between how well teams scored at home versus away. In all cases except the 2021 season, we can say with significant certaintaty that there is indeed an advantage to playing at home versus playing away. The p-value for the 2021 season (~0.08) is too high to reject our null hypothesis at the decided significance. These results seem to echo what has been previously established
+
+### Problem 2: Player Categorization 🎽
