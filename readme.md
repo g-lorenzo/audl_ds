@@ -18,5 +18,10 @@ For future work, it would be useful to identify players that have shifted roles 
 
 
 ## 📊 Results
+Using data from 2014 through 2021 (excluding 2020 due to a lack of season), there is strong statistical evidence that playing at home provides considerable advantage for a team as compared to playing away. The data assessed over 1,000 AUDL games from the perspective of both the home and the away teams. The following image shows how many Home games each team played across the 7 seasons.
+
+[![Home Games Played]](./IMAGES/home_games_count.png)]
+
+
 
 ### Problem 1: Home Court Advantage
