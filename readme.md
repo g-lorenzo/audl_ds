@@ -41,3 +41,31 @@ The higher the scoring factor, the more goals a team is expected to score agains
 Additionally, a study was done to see if there is statistical significance to the difference between how well teams scored at home versus away. In all cases except the 2021 season, we can say with significant certaintaty that there is indeed an advantage to playing at home versus playing away. The p-value for the 2021 season (~0.08) is too high to reject our null hypothesis at the decided significance. These results seem to echo what has been previously established
 
 ### Problem 2: Player Categorization 🎽
+
+The AUDL website contains stats and player information for the more than 2,500 athletes that have played in the professional league. In addition to noting the number of assists, goals, huck percentage, etc., a select number of players have information on their position as shown below.
+
+![Player Profile](./IMAGES/profile%20example.JPG)
+
+As shown above, Matt Smith of the Atlanta Hustle is listed as a 'Hybrid' meaning he can often be found both handling the disc and cutting for the disc on offense. Looking at the scraped data, the AUDL lists players as one of four 'positions':
+
+1. Hybrid: Able to be both a cutter and a handler on offense
+2. Cutter: An offensive cutter who makes athletic moves to advance the disc up the field
+3. Handler: A player with great throwing skills who can throw to cutters
+4. Defender: A player who works on defense to disrupt the other team's offensive flow
+
+Unfortunately, of the 2,558 players on the website, only 474 players with an official listed position. With that information, is it possible to assess player stats to create a model for classifying players?
+
+After performing Principle Component Analysis, some great segmentation of players was shown when projecting information into a 2D space.
+
+![PCA](./IMAGES/PCA.png)
+
+This indicated promise for creating an effective model. Five models were created, trained, tuned, and tested. The F-1 score was used as the success metric. Below is how each Model performed on the test data (30%).
+
+| model | f-1 score |
+|-------|-----------|
+| Decision Tree | 0.559944 |
+| Random Forest | 0.60839 |
+|  XGB  | 0.64336 |
+|  KNN  | 0.67133   |
+
+The KNN model performed best overal with 67%. The primary issue seen in all models was heavy overtraining. Many models performed 20%+ better on training data as compared to test data. Finally, an ensemble of the top 3 models was created to test if an ensemble might perform better. The ensemble model had an F-1 score 0f 0.59441, performing just below the Random Forest model.
