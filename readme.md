@@ -68,4 +68,10 @@ This indicated promise for creating an effective model. Five models were created
 |  XGB  | 0.64336 |
 |  KNN  | 0.67133   |
 
-The KNN model performed best overal with 67%. The primary issue seen in all models was heavy overtraining. Many models performed 20%+ better on training data as compared to test data. Finally, an ensemble of the top 3 models was created to test if an ensemble might perform better. The ensemble model had an F-1 score 0f 0.59441, performing just below the Random Forest model.
+The KNN model performed best overal with 67%. The primary issue seen in all models was heavy overtraining. Many models performed 20%+ better on training data as compared to test data. Finally, an ensemble of the top 3 models was created to test if an ensemble might perform better. The ensemble model had an F-1 score 0f 0.59441, performing just below the Random Forest model. Although the score is not high enough to use to classify the remaining players, it is a good exercise in understanding how certain roles tend to show up on the stat sheet.
+
+The addition of more data would greatly help train a more robust model, capable of making better predictions. Additionally, the removal of the 'Hybrid' category may improve model performance by helping more clearly separate players who are cutters and player who are handlers. A series of models could be used to better predict using the following logic:
+
+1. Categorize offense (Cutter, Handler, Hybrid) and defense (Defender)
+2. Categorize Cutters and Handlers
+3. From the cutters and Handlers, identify which may be hybrids
